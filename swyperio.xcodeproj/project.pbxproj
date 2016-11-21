@@ -8,13 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		CE9120321DE3A69500E61C4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120311DE3A69500E61C4B /* AppDelegate.swift */; };
-		CE9120341DE3A69500E61C4B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120331DE3A69500E61C4B /* FirstViewController.swift */; };
-		CE9120361DE3A69500E61C4B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120351DE3A69500E61C4B /* SecondViewController.swift */; };
+		CE9120341DE3A69500E61C4B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120331DE3A69500E61C4B /* ProfileViewController.swift */; };
+		CE9120361DE3A69500E61C4B /* ExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120351DE3A69500E61C4B /* ExchangeViewController.swift */; };
 		CE9120391DE3A69500E61C4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9120371DE3A69500E61C4B /* Main.storyboard */; };
 		CE91203B1DE3A69500E61C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE91203A1DE3A69500E61C4B /* Assets.xcassets */; };
 		CE91203E1DE3A69500E61C4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE91203C1DE3A69500E61C4B /* LaunchScreen.storyboard */; };
 		CE9120491DE3A69500E61C4B /* swyperioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120481DE3A69500E61C4B /* swyperioTests.swift */; };
 		CE9120541DE3A69500E61C4B /* swyperioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120531DE3A69500E61C4B /* swyperioUITests.swift */; };
+		CE9120621DE3A9DE00E61C4B /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120611DE3A9DE00E61C4B /* MessagesViewController.swift */; };
+		CE9120641DE3AAD600E61C4B /* AcceptServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120631DE3AAD600E61C4B /* AcceptServiceViewController.swift */; };
+		CE9120661DE3AC1400E61C4B /* CreateServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120651DE3AC1400E61C4B /* CreateServiceViewController.swift */; };
+		CE9120681DE3ACAF00E61C4B /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120671DE3ACAF00E61C4B /* EditProfileViewController.swift */; };
+		CE91206A1DE3AD4200E61C4B /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120691DE3AD4200E61C4B /* CreateProfileViewController.swift */; };
+		CE91206C1DE3AE1200E61C4B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91206B1DE3AE1200E61C4B /* LogInViewController.swift */; };
+		CE91206E1DE3AEB900E61C4B /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91206D1DE3AEB900E61C4B /* ConversationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +44,8 @@
 /* Begin PBXFileReference section */
 		CE91202E1DE3A69500E61C4B /* swyperio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swyperio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9120311DE3A69500E61C4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE9120331DE3A69500E61C4B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		CE9120351DE3A69500E61C4B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		CE9120331DE3A69500E61C4B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CE9120351DE3A69500E61C4B /* ExchangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeViewController.swift; sourceTree = "<group>"; };
 		CE9120381DE3A69500E61C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE91203A1DE3A69500E61C4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE91203D1DE3A69500E61C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +56,13 @@
 		CE91204F1DE3A69500E61C4B /* swyperioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swyperioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9120531DE3A69500E61C4B /* swyperioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swyperioUITests.swift; sourceTree = "<group>"; };
 		CE9120551DE3A69500E61C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE9120611DE3A9DE00E61C4B /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		CE9120631DE3AAD600E61C4B /* AcceptServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptServiceViewController.swift; sourceTree = "<group>"; };
+		CE9120651DE3AC1400E61C4B /* CreateServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateServiceViewController.swift; sourceTree = "<group>"; };
+		CE9120671DE3ACAF00E61C4B /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		CE9120691DE3AD4200E61C4B /* CreateProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
+		CE91206B1DE3AE1200E61C4B /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		CE91206D1DE3AEB900E61C4B /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +114,15 @@
 			isa = PBXGroup;
 			children = (
 				CE9120311DE3A69500E61C4B /* AppDelegate.swift */,
-				CE9120331DE3A69500E61C4B /* FirstViewController.swift */,
-				CE9120351DE3A69500E61C4B /* SecondViewController.swift */,
+				CE9120331DE3A69500E61C4B /* ProfileViewController.swift */,
+				CE9120351DE3A69500E61C4B /* ExchangeViewController.swift */,
+				CE9120671DE3ACAF00E61C4B /* EditProfileViewController.swift */,
+				CE9120651DE3AC1400E61C4B /* CreateServiceViewController.swift */,
+				CE9120631DE3AAD600E61C4B /* AcceptServiceViewController.swift */,
+				CE9120611DE3A9DE00E61C4B /* MessagesViewController.swift */,
+				CE9120691DE3AD4200E61C4B /* CreateProfileViewController.swift */,
+				CE91206B1DE3AE1200E61C4B /* LogInViewController.swift */,
+				CE91206D1DE3AEB900E61C4B /* ConversationViewController.swift */,
 				CE9120371DE3A69500E61C4B /* Main.storyboard */,
 				CE91203A1DE3A69500E61C4B /* Assets.xcassets */,
 				CE91203C1DE3A69500E61C4B /* LaunchScreen.storyboard */,
@@ -265,9 +286,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9120361DE3A69500E61C4B /* SecondViewController.swift in Sources */,
+				CE91206A1DE3AD4200E61C4B /* CreateProfileViewController.swift in Sources */,
+				CE9120361DE3A69500E61C4B /* ExchangeViewController.swift in Sources */,
+				CE91206E1DE3AEB900E61C4B /* ConversationViewController.swift in Sources */,
+				CE91206C1DE3AE1200E61C4B /* LogInViewController.swift in Sources */,
+				CE9120641DE3AAD600E61C4B /* AcceptServiceViewController.swift in Sources */,
 				CE9120321DE3A69500E61C4B /* AppDelegate.swift in Sources */,
-				CE9120341DE3A69500E61C4B /* FirstViewController.swift in Sources */,
+				CE9120621DE3A9DE00E61C4B /* MessagesViewController.swift in Sources */,
+				CE9120661DE3AC1400E61C4B /* CreateServiceViewController.swift in Sources */,
+				CE9120341DE3A69500E61C4B /* ProfileViewController.swift in Sources */,
+				CE9120681DE3ACAF00E61C4B /* EditProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
