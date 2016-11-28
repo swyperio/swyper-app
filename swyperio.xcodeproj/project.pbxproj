@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54ECA4D1A6ABD5C3E549BFC2 /* Pods_swyperioUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 213EB8D0FE8C739FC43FD524 /* Pods_swyperioUITests.framework */; };
+		6382FA20CA25B339DA2B07D5 /* Pods_swyperioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9671F8F2B7BA4E86E7597614 /* Pods_swyperioTests.framework */; };
 		CE17C4551DEC712900EA0D84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE17C4541DEC712900EA0D84 /* GoogleService-Info.plist */; };
 		CE9120321DE3A69500E61C4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120311DE3A69500E61C4B /* AppDelegate.swift */; };
 		CE9120341DE3A69500E61C4B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120331DE3A69500E61C4B /* ProfileViewController.swift */; };
@@ -23,6 +25,7 @@
 		CE91206A1DE3AD4200E61C4B /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120691DE3AD4200E61C4B /* CreateProfileViewController.swift */; };
 		CE91206C1DE3AE1200E61C4B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91206B1DE3AE1200E61C4B /* LogInViewController.swift */; };
 		CE91206E1DE3AEB900E61C4B /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91206D1DE3AEB900E61C4B /* ConversationViewController.swift */; };
+		D5AF357FCE0EB944465FED5B /* Pods_swyperio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FDD0B40BD6D0BBFB5CD6F6A /* Pods_swyperio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BE0B7C93F99A7AB7DC37673 /* Pods-swyperio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swyperio.release.xcconfig"; path = "Pods/Target Support Files/Pods-swyperio/Pods-swyperio.release.xcconfig"; sourceTree = "<group>"; };
+		0F6F35B99B6C8B85E7B3EB00 /* Pods-swyperioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swyperioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-swyperioTests/Pods-swyperioTests.release.xcconfig"; sourceTree = "<group>"; };
+		213EB8D0FE8C739FC43FD524 /* Pods_swyperioUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swyperioUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35B243E18A08D29C5144E86C /* Pods-swyperioUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swyperioUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-swyperioUITests/Pods-swyperioUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5FDD0B40BD6D0BBFB5CD6F6A /* Pods_swyperio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swyperio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DE9A1E8FA458A025ECEFAF5 /* Pods-swyperioUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swyperioUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swyperioUITests/Pods-swyperioUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9671F8F2B7BA4E86E7597614 /* Pods_swyperioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swyperioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C82290E24FBF7AA9A8698243 /* Pods-swyperio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swyperio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swyperio/Pods-swyperio.debug.xcconfig"; sourceTree = "<group>"; };
+		CBF96CB2D07CB2BAC548BE0A /* Pods-swyperioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swyperioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swyperioTests/Pods-swyperioTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE17C4541DEC712900EA0D84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE91202E1DE3A69500E61C4B /* swyperio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swyperio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9120311DE3A69500E61C4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5AF357FCE0EB944465FED5B /* Pods_swyperio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6382FA20CA25B339DA2B07D5 /* Pods_swyperioTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,12 +100,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54ECA4D1A6ABD5C3E549BFC2 /* Pods_swyperioUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A9512AD0B39E550411B679C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FDD0B40BD6D0BBFB5CD6F6A /* Pods_swyperio.framework */,
+				9671F8F2B7BA4E86E7597614 /* Pods_swyperioTests.framework */,
+				213EB8D0FE8C739FC43FD524 /* Pods_swyperioUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE9120251DE3A69500E61C4B = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +124,8 @@
 				CE9120471DE3A69500E61C4B /* swyperioTests */,
 				CE9120521DE3A69500E61C4B /* swyperioUITests */,
 				CE91202F1DE3A69500E61C4B /* Products */,
+				D7CA612578D37C107733B3D3 /* Pods */,
+				A9512AD0B39E550411B679C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +179,19 @@
 			path = swyperioUITests;
 			sourceTree = "<group>";
 		};
+		D7CA612578D37C107733B3D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C82290E24FBF7AA9A8698243 /* Pods-swyperio.debug.xcconfig */,
+				0BE0B7C93F99A7AB7DC37673 /* Pods-swyperio.release.xcconfig */,
+				CBF96CB2D07CB2BAC548BE0A /* Pods-swyperioTests.debug.xcconfig */,
+				0F6F35B99B6C8B85E7B3EB00 /* Pods-swyperioTests.release.xcconfig */,
+				8DE9A1E8FA458A025ECEFAF5 /* Pods-swyperioUITests.debug.xcconfig */,
+				35B243E18A08D29C5144E86C /* Pods-swyperioUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE9120581DE3A69500E61C4B /* Build configuration list for PBXNativeTarget "swyperio" */;
 			buildPhases = (
+				0A4916F1546BE02296A2138D /* [CP] Check Pods Manifest.lock */,
 				CE91202A1DE3A69500E61C4B /* Sources */,
 				CE91202B1DE3A69500E61C4B /* Frameworks */,
 				CE91202C1DE3A69500E61C4B /* Resources */,
+				CE170EDBEB7206DFF12D4E38 /* [CP] Embed Pods Frameworks */,
+				7D610432610A498F2CD7BF87 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE91205B1DE3A69500E61C4B /* Build configuration list for PBXNativeTarget "swyperioTests" */;
 			buildPhases = (
+				8EBD0CF2B7CA468AAB079D0B /* [CP] Check Pods Manifest.lock */,
 				CE9120401DE3A69500E61C4B /* Sources */,
 				CE9120411DE3A69500E61C4B /* Frameworks */,
 				CE9120421DE3A69500E61C4B /* Resources */,
+				8897DA19ADE7B1A3DF1DDFC6 /* [CP] Embed Pods Frameworks */,
+				0E805B96665C5DA3D673F019 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,9 +240,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE91205E1DE3A69500E61C4B /* Build configuration list for PBXNativeTarget "swyperioUITests" */;
 			buildPhases = (
+				C5C00DC764A817226B4D193E /* [CP] Check Pods Manifest.lock */,
 				CE91204B1DE3A69500E61C4B /* Sources */,
 				CE91204C1DE3A69500E61C4B /* Frameworks */,
 				CE91204D1DE3A69500E61C4B /* Resources */,
+				983EE43635A070DCD22AB461 /* [CP] Embed Pods Frameworks */,
+				D319B8694E2106C36718AF44 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,6 +333,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A4916F1546BE02296A2138D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0E805B96665C5DA3D673F019 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swyperioTests/Pods-swyperioTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D610432610A498F2CD7BF87 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swyperio/Pods-swyperio-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8897DA19ADE7B1A3DF1DDFC6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swyperioTests/Pods-swyperioTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EBD0CF2B7CA468AAB079D0B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		983EE43635A070DCD22AB461 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swyperioUITests/Pods-swyperioUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5C00DC764A817226B4D193E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CE170EDBEB7206DFF12D4E38 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swyperio/Pods-swyperio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D319B8694E2106C36718AF44 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swyperioUITests/Pods-swyperioUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE91202A1DE3A69500E61C4B /* Sources */ = {
@@ -447,6 +634,7 @@
 		};
 		CE9120591DE3A69500E61C4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C82290E24FBF7AA9A8698243 /* Pods-swyperio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YKK97PE39U;
@@ -460,6 +648,7 @@
 		};
 		CE91205A1DE3A69500E61C4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BE0B7C93F99A7AB7DC37673 /* Pods-swyperio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YKK97PE39U;
@@ -473,6 +662,7 @@
 		};
 		CE91205C1DE3A69500E61C4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBF96CB2D07CB2BAC548BE0A /* Pods-swyperioTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +678,7 @@
 		};
 		CE91205D1DE3A69500E61C4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F6F35B99B6C8B85E7B3EB00 /* Pods-swyperioTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -503,6 +694,7 @@
 		};
 		CE91205F1DE3A69500E61C4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DE9A1E8FA458A025ECEFAF5 /* Pods-swyperioUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = YKK97PE39U;
@@ -517,6 +709,7 @@
 		};
 		CE9120601DE3A69500E61C4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35B243E18A08D29C5144E86C /* Pods-swyperioUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = YKK97PE39U;
