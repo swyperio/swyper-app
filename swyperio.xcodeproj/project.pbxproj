@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE17C4551DEC712900EA0D84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE17C4541DEC712900EA0D84 /* GoogleService-Info.plist */; };
 		CE9120321DE3A69500E61C4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120311DE3A69500E61C4B /* AppDelegate.swift */; };
 		CE9120341DE3A69500E61C4B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120331DE3A69500E61C4B /* ProfileViewController.swift */; };
 		CE9120361DE3A69500E61C4B /* ExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120351DE3A69500E61C4B /* ExchangeViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE17C4541DEC712900EA0D84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE91202E1DE3A69500E61C4B /* swyperio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swyperio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9120311DE3A69500E61C4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE9120331DE3A69500E61C4B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				CE91203A1DE3A69500E61C4B /* Assets.xcassets */,
 				CE91203C1DE3A69500E61C4B /* LaunchScreen.storyboard */,
 				CE91203F1DE3A69500E61C4B /* Info.plist */,
+				CE17C4541DEC712900EA0D84 /* GoogleService-Info.plist */,
 			);
 			path = swyperio;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE91203E1DE3A69500E61C4B /* LaunchScreen.storyboard in Resources */,
+				CE17C4551DEC712900EA0D84 /* GoogleService-Info.plist in Resources */,
 				CE91203B1DE3A69500E61C4B /* Assets.xcassets in Resources */,
 				CE9120391DE3A69500E61C4B /* Main.storyboard in Resources */,
 			);
@@ -448,7 +452,7 @@
 				DEVELOPMENT_TEAM = YKK97PE39U;
 				INFOPLIST_FILE = swyperio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nyu.edu.swyperio;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.nyu.swyperio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -461,7 +465,7 @@
 				DEVELOPMENT_TEAM = YKK97PE39U;
 				INFOPLIST_FILE = swyperio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nyu.edu.swyperio;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.nyu.swyperio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
