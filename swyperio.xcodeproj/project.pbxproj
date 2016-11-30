@@ -77,6 +77,7 @@
 		CE9120691DE3AD4200E61C4B /* CreateProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
 		CE91206B1DE3AE1200E61C4B /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		CE91206D1DE3AEB900E61C4B /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		CEC72A0B1DEF916900992D31 /* swyperio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = swyperio.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +143,7 @@
 		CE9120301DE3A69500E61C4B /* swyperio */ = {
 			isa = PBXGroup;
 			children = (
+				CEC72A0B1DEF916900992D31 /* swyperio.entitlements */,
 				CE9120311DE3A69500E61C4B /* AppDelegate.swift */,
 				CE9120331DE3A69500E61C4B /* ProfileViewController.swift */,
 				CE9120351DE3A69500E61C4B /* ExchangeViewController.swift */,
@@ -271,6 +273,14 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = YKK97PE39U;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					CE9120431DE3A69500E61C4B = {
 						CreatedOnToolsVersion = 8.0;
@@ -637,6 +647,7 @@
 			baseConfigurationReference = C82290E24FBF7AA9A8698243 /* Pods-swyperio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = swyperio/swyperio.entitlements;
 				DEVELOPMENT_TEAM = YKK97PE39U;
 				INFOPLIST_FILE = swyperio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -651,6 +662,7 @@
 			baseConfigurationReference = 0BE0B7C93F99A7AB7DC37673 /* Pods-swyperio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = swyperio/swyperio.entitlements;
 				DEVELOPMENT_TEAM = YKK97PE39U;
 				INFOPLIST_FILE = swyperio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
