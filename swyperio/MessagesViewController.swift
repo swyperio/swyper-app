@@ -9,10 +9,17 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
 
 class MessagesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    var ref: FIRDatabaseReference!
+    var messages: [FIRDataSnapshot]! = []
+    var msglength: Double = 10
     fileprivate var _refHandle: FIRDatabaseHandle!
+    
+    // var storageRef: FIRStorageReference!
+    // var remoteConfig: FIRRemoteConfig!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +33,7 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     deinit {
-        self.ref.child("messages").removeObserver(withHande: _refHandle)
+        self.ref.child("messages").removeObserver(withHandle: _refHandle)
     }
     
     @IBAction func signOut(_ sender: UIButton) {
