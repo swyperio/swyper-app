@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
-class MessagesViewController: UIViewController {
+class MessagesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,21 @@ class MessagesViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func signOut(_ sender: UIButton) {
+        
+        let firebaseAuth = FIRAuth.auth()
+        
+        do {
+            
+            try firebaseAuth?.signOut()
+            AppState.sharedInstance.signedIn = false
+            dismiss(animated: true, completion: nil)
+        }
+        catch let signOutError as NSError {
+            print("Error signing out: \(signOutError.localizedDescription)")
+        }
     }
     
 
