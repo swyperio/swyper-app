@@ -11,6 +11,8 @@ import Firebase
 import FirebaseAuth
 
 class MessagesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    fileprivate var _refHandle: FIRDatabaseHandle!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,10 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    deinit {
+        self.ref.child("messages").removeObserver(withHande: _refHandle)
     }
     
     @IBAction func signOut(_ sender: UIButton) {
