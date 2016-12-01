@@ -213,7 +213,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Messages" image="third" id="J8v-x8-V5H"/>
+                    <tabBarItem key="tabBarItem" title="Messages" image="third" selectedImage="first" id="J8v-x8-V5H"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MAn-eM-xL2" userLabel="First Responder" sceneMemberID="firstResponder"/>
