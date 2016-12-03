@@ -10,6 +10,7 @@
 		54ECA4D1A6ABD5C3E549BFC2 /* Pods_swyperioUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 213EB8D0FE8C739FC43FD524 /* Pods_swyperioUITests.framework */; };
 		6382FA20CA25B339DA2B07D5 /* Pods_swyperioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9671F8F2B7BA4E86E7597614 /* Pods_swyperioTests.framework */; };
 		CE80E0841DF06D68001F54F2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80E0831DF06D68001F54F2 /* AppState.swift */; };
+		CE80E08E1DF1154A001F54F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE80E08D1DF1154A001F54F2 /* GoogleService-Info.plist */; };
 		CE9120321DE3A69500E61C4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120311DE3A69500E61C4B /* AppDelegate.swift */; };
 		CE9120341DE3A69500E61C4B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120331DE3A69500E61C4B /* ProfileViewController.swift */; };
 		CE9120361DE3A69500E61C4B /* ExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120351DE3A69500E61C4B /* ExchangeViewController.swift */; };
@@ -56,6 +57,7 @@
 		C82290E24FBF7AA9A8698243 /* Pods-swyperio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swyperio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swyperio/Pods-swyperio.debug.xcconfig"; sourceTree = "<group>"; };
 		CBF96CB2D07CB2BAC548BE0A /* Pods-swyperioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swyperioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swyperioTests/Pods-swyperioTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE80E0831DF06D68001F54F2 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		CE80E08D1DF1154A001F54F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE91202E1DE3A69500E61C4B /* swyperio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swyperio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9120311DE3A69500E61C4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE9120331DE3A69500E61C4B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		CE9120251DE3A69500E61C4B = {
 			isa = PBXGroup;
 			children = (
+				CE80E08D1DF1154A001F54F2 /* GoogleService-Info.plist */,
 				CE9120301DE3A69500E61C4B /* swyperio */,
 				CE9120471DE3A69500E61C4B /* swyperioTests */,
 				CE9120521DE3A69500E61C4B /* swyperioUITests */,
@@ -322,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE91203E1DE3A69500E61C4B /* LaunchScreen.storyboard in Resources */,
+				CE80E08E1DF1154A001F54F2 /* GoogleService-Info.plist in Resources */,
 				CE91203B1DE3A69500E61C4B /* Assets.xcassets in Resources */,
 				CE9120391DE3A69500E61C4B /* Main.storyboard in Resources */,
 			);
@@ -569,6 +573,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -618,6 +623,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
