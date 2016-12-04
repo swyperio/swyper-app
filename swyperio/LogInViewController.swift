@@ -21,8 +21,9 @@ class LogInViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
+    @IBAction func signOut(segue: UIStoryboardSegue) {
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -30,6 +31,4 @@ class LogInViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
-
 }

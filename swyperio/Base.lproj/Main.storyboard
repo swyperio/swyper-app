@@ -29,7 +29,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GTv-oM-bV0" kind="presentation" id="DUw-Of-BSX"/>
+                                    <segue destination="GTv-oM-bV0" kind="presentation" identifier="createSwypeSegue" id="DUw-Of-BSX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7p-TF-2dG">
@@ -38,25 +38,32 @@
                                 <state key="normal" title="SIGN OUT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Zme-Eu-6xd" kind="unwind" unwindAction="signOutWithSegue:" id="gIW-hA-LEe"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AaA-xP-RRe">
-                                <rect key="frame" x="120" y="95" width="175" height="175"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AaA-xP-RRe">
+                                <rect key="frame" x="107" y="95" width="201" height="175"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0Zv-RR-Wjh" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="7hZ-Wu-GBD"/>
                             <constraint firstItem="G7p-TF-2dG" firstAttribute="top" secondItem="0Zv-RR-Wjh" secondAttribute="bottom" constant="63" id="Hsn-fK-sNR"/>
+                            <constraint firstItem="0Zv-RR-Wjh" firstAttribute="top" secondItem="AaA-xP-RRe" secondAttribute="bottom" constant="83" id="Jcf-6q-SrG"/>
+                            <constraint firstItem="AaA-xP-RRe" firstAttribute="centerX" secondItem="0Zv-RR-Wjh" secondAttribute="centerX" id="OP2-da-1ZO"/>
+                            <constraint firstItem="AaA-xP-RRe" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="75" id="eOt-b4-clP"/>
                             <constraint firstItem="0Zv-RR-Wjh" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="f1L-0J-GBx"/>
                             <constraint firstItem="G7p-TF-2dG" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="87" id="jee-RR-Yl2"/>
                             <constraint firstItem="G7p-TF-2dG" firstAttribute="trailing" secondItem="0Zv-RR-Wjh" secondAttribute="trailing" id="kDT-Iq-fyo"/>
                             <constraint firstItem="G7p-TF-2dG" firstAttribute="leading" secondItem="0Zv-RR-Wjh" secondAttribute="leading" id="lTc-jB-7IR"/>
+                            <constraint firstItem="AaA-xP-RRe" firstAttribute="leading" secondItem="0Zv-RR-Wjh" secondAttribute="leading" id="z32-5P-GGR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="first" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <exit id="Zme-Eu-6xd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
@@ -97,8 +104,16 @@
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title=" swype" id="l3V-Oy-0sk">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="30O-Xz-sb2"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Done" id="I67-Ay-cLP"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="30O-Xz-sb2">
+                                            <connections>
+                                                <segue destination="wjO-xK-fiv" kind="unwind" unwindAction="cancelCreateServiceWithSeuge:" id="hHf-x7-ao5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="I67-Ay-cLP">
+                                            <connections>
+                                                <segue destination="wjO-xK-fiv" kind="unwind" unwindAction="doneCreateServiceWithSegue:" id="vvh-SX-umk"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -107,6 +122,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBd-wM-nZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="wjO-xK-fiv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1597" y="-320"/>
         </scene>
@@ -152,7 +168,7 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="49e-Tb-3d3" kind="presentation" id="1Jm-Fs-W2r"/>
+                                    <segue destination="49e-Tb-3d3" kind="presentation" identifier="signInSegue" id="1Jm-Fs-W2r"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOx-D0-bOS">

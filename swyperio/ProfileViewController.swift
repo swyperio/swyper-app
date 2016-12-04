@@ -19,7 +19,14 @@ class ProfileViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    @IBAction func doneCreateService(segue: UIStoryboardSegue) {
+    }
+    
+    @IBAction func cancelCreateService(seuge: UIStoryboardSegue) {
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    }
 }
 
