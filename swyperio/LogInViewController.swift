@@ -66,6 +66,13 @@ class LogInViewController: UIViewController {
     }
     
     func signedIn(_ user: FIRUser?) {
-    
+        
+        GoogleAnalyticsEvents.sendLogInEvent()
+        
+        AppState.sharedInstance.displayName = user?.displayName ?? user?.email
+        AppState.sharedInstance.photoURL = user?.photoURL
+        AppState.sharedInstance.signedIn = true
+        
+        let notificationName = Notification.Name(rawValue: Constants.NotificationKeys.SignedIn)
     }
 }
