@@ -13,11 +13,6 @@ struct Constants {
         static let SignedIn = "onSignInCompleted"
     }
     
-    struct Segues {
-        
-        static let signIn = "signInSegue"
-    }
-    
     struct MessageFields {
         
         static let name = "name"
