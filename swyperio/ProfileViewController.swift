@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ProfileViewController: UIViewController {
 
@@ -18,6 +19,22 @@ class ProfileViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func didTapSignOut(_ sender: UIButton) {
+    
+        let firebaseAuth = FIRAuth.auth()
+        
+        do {
+        
+            try firebaseAuth?.signOut()
+            AppState.sharedInstance.signedIn = false
+            // dismiss(animated: true, completion: nil)
+            self.performSegue(withIdentifier: "signOutSegue", sender: nil)
+        }
+        catch let signOutError as NSError {
+            print("ERROR OCCURRED AT SIGN OUT", signOutError.localizedDescription)
+        }
     }
     
     @IBAction func doneCreateService(segue: UIStoryboardSegue) {

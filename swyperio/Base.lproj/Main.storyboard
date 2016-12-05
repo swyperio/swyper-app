@@ -45,7 +45,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Zme-Eu-6xd" kind="unwind" unwindAction="signOutWithSegue:" id="gIW-hA-LEe"/>
+                                    <action selector="didTapSignOut:" destination="9pv-A4-QxB" eventType="touchUpInside" id="DfI-lc-oat"/>
+                                    <segue destination="Zme-Eu-6xd" kind="unwind" identifier="signOutSegue" unwindAction="signOutWithSegue:" id="ML0-3R-OLK"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AaA-xP-RRe">
@@ -112,12 +113,12 @@
                                     <navigationItem title=" swype" id="l3V-Oy-0sk">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="30O-Xz-sb2">
                                             <connections>
-                                                <segue destination="wjO-xK-fiv" kind="unwind" unwindAction="cancelCreateServiceWithSeuge:" id="hHf-x7-ao5"/>
+                                                <segue destination="wjO-xK-fiv" kind="unwind" identifier="cancelCreateServiceSegue" unwindAction="cancelCreateServiceWithSeuge:" id="hHf-x7-ao5"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="I67-Ay-cLP">
                                             <connections>
-                                                <segue destination="wjO-xK-fiv" kind="unwind" unwindAction="doneCreateServiceWithSegue:" id="vvh-SX-umk"/>
+                                                <segue destination="wjO-xK-fiv" kind="unwind" identifier="doneCreateServiceSegue" unwindAction="doneCreateServiceWithSegue:" id="vvh-SX-umk"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>

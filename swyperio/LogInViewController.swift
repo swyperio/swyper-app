@@ -92,6 +92,12 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func signOut(segue: UIStoryboardSegue) {
+        
+        if segue.identifier == "signOutSegue" {
+            
+            self.emailTextField.text = ""
+            self.passwordTextField.text = ""
+        }
     }
     
     // MARK: - Navigation
