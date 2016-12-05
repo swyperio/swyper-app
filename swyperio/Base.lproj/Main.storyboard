@@ -185,6 +185,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOx-D0-bOS">
                                 <rect key="frame" x="91" y="454" width="232" height="30"/>
                                 <state key="normal" title="Create Account"/>
+                                <connections>
+                                    <action selector="didTapSignUp:" destination="xaL-m9-uye" eventType="touchUpInside" id="7Pt-CK-8zU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92538958787918091" green="0.92554813623428345" blue="0.92537957429885864" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
