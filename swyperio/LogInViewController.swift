@@ -49,6 +49,7 @@ class LogInViewController: UIViewController {
                 return
             }
             self.signedIn(user!)
+            self.performSegue(withIdentifier: "signInSegue", sender: nil)
         }
     }
     
@@ -73,6 +74,5 @@ class LogInViewController: UIViewController {
         
         let notificationName = Notification.Name(rawValue: Constants.NotificationKeys.SignedIn)
         NotificationCenter.default.post(name: notificationName, object: nil, userInfo: nil)
-        performSegue(withIdentifier: Constants.Segues.signIn, sender: nil)
     }
 }
