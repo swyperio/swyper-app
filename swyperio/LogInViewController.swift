@@ -40,18 +40,16 @@ class LogInViewController: UIViewController {
             self.present(invalidEmailOrPasswordAlert, animated: true, completion: nil)
             return
         }
-        FIRAuth.auth()?.signIn(withEmail: email, password: password) {
-            (user, error) in
+        FIRAuth.auth()?.signIn(withEmail: email, password: password) { (user, error) in
             if let error = error {
-                print(error.localizedDescription)
-                let invalidEmailOrPasswordAlert = UIAlertController(title: "Invalid Email or Password", message: "The email or password you gave is invalid", preferredStyle: UIAlertControllerStyle.alert)
-                invalidEmailOrPasswordAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-                self.present(invalidEmailOrPasswordAlert, animated: true, completion: nil)
+                print("ERROR OCCURED AT SIGN IN", error.localizedDescription)
+                let userDoesNotExist = UIAlertController(title: "Invalid Email or Password", message: "The email or password you gave is invalid", preferredStyle: UIAlertControllerStyle.alert)
+                userDoesNotExist.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(userDoesNotExist, animated: true, completion: nil)
                 return
             }
             self.signedIn(user!)
         }
-        performSegue(withIdentifier: "signInSegue", sender: nil)
     }
     
     @IBAction func signOut(segue: UIStoryboardSegue) {
@@ -74,5 +72,7 @@ class LogInViewController: UIViewController {
         AppState.sharedInstance.signedIn = true
         
         let notificationName = Notification.Name(rawValue: Constants.NotificationKeys.SignedIn)
+        NotificationCenter.default.post(name: notificationName, object: nil, userInfo: nil)
+        performSegue(withIdentifier: Constants.Segues.signIn, sender: nil)
     }
 }

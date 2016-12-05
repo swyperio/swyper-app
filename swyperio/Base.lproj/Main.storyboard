@@ -180,7 +180,6 @@
                                 </state>
                                 <connections>
                                     <action selector="didTapSignIn:" destination="xaL-m9-uye" eventType="touchUpInside" id="cqF-AH-JyC"/>
-                                    <segue destination="49e-Tb-3d3" kind="show" identifier="signInSegue" id="1Jm-Fs-W2r"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOx-D0-bOS">
@@ -210,6 +209,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="xBF-4l-8Po" id="C3x-ja-Pvn"/>
                         <outlet property="passwordTextField" destination="LkW-jY-Pn4" id="k6H-4e-lsn"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="signInSegue" id="l22-xB-Hca"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="guZ-nm-urf" userLabel="First Responder" sceneMemberID="firstResponder"/>
