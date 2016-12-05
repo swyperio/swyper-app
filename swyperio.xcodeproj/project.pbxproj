@@ -20,6 +20,7 @@
 		CE9120541DE3A69500E61C4B /* swyperioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120531DE3A69500E61C4B /* swyperioUITests.swift */; };
 		CE9120661DE3AC1400E61C4B /* CreateServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120651DE3AC1400E61C4B /* CreateServiceViewController.swift */; };
 		CE91206C1DE3AE1200E61C4B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91206B1DE3AE1200E61C4B /* LogInViewController.swift */; };
+		CEFD5BA61DF5A55E00CC46D3 /* GoogleAnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD5BA51DF5A55E00CC46D3 /* GoogleAnalyticsEvents.swift */; };
 		D5AF357FCE0EB944465FED5B /* Pods_swyperio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FDD0B40BD6D0BBFB5CD6F6A /* Pods_swyperio.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		CE9120651DE3AC1400E61C4B /* CreateServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateServiceViewController.swift; sourceTree = "<group>"; };
 		CE91206B1DE3AE1200E61C4B /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		CEC72A0B1DEF916900992D31 /* swyperio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = swyperio.entitlements; sourceTree = "<group>"; };
+		CEFD5BA51DF5A55E00CC46D3 /* GoogleAnalyticsEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAnalyticsEvents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				CE9120651DE3AC1400E61C4B /* CreateServiceViewController.swift */,
 				CE80E0831DF06D68001F54F2 /* AppState.swift */,
 				CE91206B1DE3AE1200E61C4B /* LogInViewController.swift */,
+				CEFD5BA51DF5A55E00CC46D3 /* GoogleAnalyticsEvents.swift */,
 				CE9120371DE3A69500E61C4B /* Main.storyboard */,
 				CE91203A1DE3A69500E61C4B /* Assets.xcassets */,
 				CE91203C1DE3A69500E61C4B /* LaunchScreen.storyboard */,
@@ -474,6 +477,7 @@
 			files = (
 				CE91206C1DE3AE1200E61C4B /* LogInViewController.swift in Sources */,
 				CE9120321DE3A69500E61C4B /* AppDelegate.swift in Sources */,
+				CEFD5BA61DF5A55E00CC46D3 /* GoogleAnalyticsEvents.swift in Sources */,
 				CE80E0841DF06D68001F54F2 /* AppState.swift in Sources */,
 				CE9120661DE3AC1400E61C4B /* CreateServiceViewController.swift in Sources */,
 				CE9120341DE3A69500E61C4B /* ProfileViewController.swift in Sources */,

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LogInViewController: UIViewController {
 
@@ -17,6 +18,9 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if let user = FIRAuth.auth()?.currentUser {
+            self.signedIn(user)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,16 +31,26 @@ class LogInViewController: UIViewController {
     @IBAction func didTapSignIn(_ sender: AnyObject?) {
     
         let email: String = emailTextField.text!
-        let pasword: String = passwordTextField.text!
+        let password: String = passwordTextField.text!
         
-        guard email != "" && pasword != ""
+        guard email != "" && password != ""
         else {
             let invalidEmailOrPasswordAlert = UIAlertController(title: "Invalid Email or Password", message: "The email or password you gave is invalid", preferredStyle: UIAlertControllerStyle.alert)
             invalidEmailOrPasswordAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             self.present(invalidEmailOrPasswordAlert, animated: true, completion: nil)
             return
         }
-        
+        FIRAuth.auth()?.signIn(withEmail: email, password: password) {
+            (user, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                let invalidEmailOrPasswordAlert = UIAlertController(title: "Invalid Email or Password", message: "The email or password you gave is invalid", preferredStyle: UIAlertControllerStyle.alert)
+                invalidEmailOrPasswordAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(invalidEmailOrPasswordAlert, animated: true, completion: nil)
+                return
+            }
+            self.signedIn(user!)
+        }
         performSegue(withIdentifier: "signInSegue", sender: nil)
     }
     
@@ -49,5 +63,9 @@ class LogInViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+    }
+    
+    func signedIn(_ user: FIRUser?) {
+    
     }
 }
