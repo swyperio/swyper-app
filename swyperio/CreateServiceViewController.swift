@@ -17,6 +17,7 @@ class CreateServiceViewController: UIViewController, UITableViewDataSource, UITa
 
         // Do any additional setup after loading the view.
         self.serviceDetailTable.register(UITableViewCell.self, forCellReuseIdentifier: "tableViewCell")
+        
         serviceDetailTable.delegate = self
         serviceDetailTable.dataSource = self
     }
@@ -37,8 +38,9 @@ class CreateServiceViewController: UIViewController, UITableViewDataSource, UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "nameCell", for: indexPath)
-        cell.textLabel?.text = "TEST"
-        // cell.contentView.addSubview(UITextView())
+        let row = indexPath.row
+        
+        cell.textLabel?.text = ["TEST NAME", "TEST DATE"][row]
         return cell
     }
     
