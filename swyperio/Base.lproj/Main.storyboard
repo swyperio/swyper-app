@@ -67,7 +67,7 @@
                             <constraint firstItem="0Zv-RR-Wjh" firstAttribute="leading" secondItem="AaA-xP-RRe" secondAttribute="leading" id="ynj-kf-g08"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="userIcon" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
                 <exit id="Zme-Eu-6xd" userLabel="Exit" sceneMemberID="exit"/>
@@ -87,7 +87,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Exchange" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Exchange" image="exchangeIcon" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -294,7 +294,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="exchangeIcon" width="26" height="29"/>
+        <image name="userIcon" width="23" height="22"/>
     </resources>
 </document>
