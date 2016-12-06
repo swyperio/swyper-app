@@ -10,16 +10,33 @@ import UIKit
 
 class CreateServiceViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    @IBOutlet weak var serviceDetailTable: UITableView!
+    // @IBOutlet weak var serviceDetailTable: UITableView!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var dateTextField: UITextField!
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        
+        if textField === dateTextField {
+            return false
+        }
+        return true
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.serviceDetailTable.register(UITableViewCell.self, forCellReuseIdentifier: "tableViewCell")
+        /*
+        self.serviceDetailTable.register(UITableViewCell.self, forCellReuseIdentifier: "nameCell")
         
         serviceDetailTable.delegate = self
         serviceDetailTable.dataSource = self
+        
+        serviceDetailTable.setNeedsLayout()
+        serviceDetailTable.layoutIfNeeded()
+         */
+        dateTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,9 +55,8 @@ class CreateServiceViewController: UIViewController, UITableViewDataSource, UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "nameCell", for: indexPath)
-        let row = indexPath.row
         
-        cell.textLabel?.text = ["TEST NAME", "TEST DATE"][row]
+        cell.textLabel?.text = ["TEST NAME", "TEST DATE"][indexPath.row]
         return cell
     }
     
