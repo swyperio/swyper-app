@@ -124,19 +124,63 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M05-tC-PgC">
+                                <rect key="frame" x="0.0" y="64" width="414" height="276"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="276" id="eug-gV-Iyd"/>
+                                </constraints>
+                            </pickerView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="40" sectionFooterHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="32J-46-D03">
+                                <rect key="frame" x="0.0" y="348" width="414" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="nameCell" rowHeight="40" id="RiD-Jx-dp4">
+                                        <rect key="frame" x="0.0" y="40" width="414" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RiD-Jx-dp4" id="s1V-z7-96F">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="39.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoD-A7-FOu">
+                                <rect key="frame" x="107" y="484" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="GBp-o0-JeD"/>
+                                </constraints>
+                                <state key="normal" title="ATTACH A PHOTO">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="32J-46-D03" firstAttribute="centerX" secondItem="M05-tC-PgC" secondAttribute="centerX" id="2x2-ju-dHC"/>
                             <constraint firstItem="ifC-4S-THA" firstAttribute="top" secondItem="hHD-FX-NQh" secondAttribute="bottom" id="5Zc-wZ-7QP"/>
+                            <constraint firstItem="M05-tC-PgC" firstAttribute="width" secondItem="vVi-7e-PU7" secondAttribute="width" id="Kg5-wl-m92"/>
                             <constraint firstItem="ifC-4S-THA" firstAttribute="leading" secondItem="vVi-7e-PU7" secondAttribute="leading" id="Ox0-hk-jCu"/>
+                            <constraint firstItem="M05-tC-PgC" firstAttribute="leading" secondItem="ifC-4S-THA" secondAttribute="leading" id="TYH-4Q-m2C"/>
+                            <constraint firstItem="32J-46-D03" firstAttribute="width" secondItem="vVi-7e-PU7" secondAttribute="width" id="WLA-wK-pyC"/>
+                            <constraint firstItem="M05-tC-PgC" firstAttribute="top" secondItem="ifC-4S-THA" secondAttribute="bottom" id="Wih-7W-U48"/>
+                            <constraint firstItem="qoD-A7-FOu" firstAttribute="centerX" secondItem="32J-46-D03" secondAttribute="centerX" id="gMm-vB-Iiq"/>
+                            <constraint firstItem="qoD-A7-FOu" firstAttribute="leading" secondItem="vVi-7e-PU7" secondAttribute="leadingMargin" constant="87" id="rTY-T4-ps5"/>
+                            <constraint firstItem="32J-46-D03" firstAttribute="top" secondItem="M05-tC-PgC" secondAttribute="bottom" constant="8" symbolic="YES" id="vUU-29-b8A"/>
                             <constraint firstItem="ifC-4S-THA" firstAttribute="width" secondItem="vVi-7e-PU7" secondAttribute="width" id="wjz-HX-Szq"/>
+                            <constraint firstItem="A64-El-lF7" firstAttribute="top" secondItem="32J-46-D03" secondAttribute="bottom" constant="260" id="xOk-0u-37V"/>
+                            <constraint firstItem="qoD-A7-FOu" firstAttribute="top" secondItem="32J-46-D03" secondAttribute="bottom" constant="8" symbolic="YES" id="ySZ-pY-GKP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="serviceDetailTable" destination="32J-46-D03" id="Xan-Hs-znT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBd-wM-nZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="wjO-xK-fiv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1597" y="-320"/>
+            <point key="canvasLocation" x="1595.6521739130435" y="-320.38043478260875"/>
         </scene>
         <!--LogIn-->
         <scene sceneID="Oxn-Fs-Wg3">
