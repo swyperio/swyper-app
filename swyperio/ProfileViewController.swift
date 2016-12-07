@@ -7,15 +7,37 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 class ProfileViewController: UIViewController {
-
+    
+    @IBOutlet weak var emailLabel: UILabel!
+    var user = FIRAuth.auth()?.currentUser
+    var databaseRef = FIRDatabase.database().reference()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let userID = FIRAuth.auth()?.currentUser?.uid
+
+        var refHandle = self.databaseRef.child("user_profile").child(userID!).observe(FIRDataEventType.value, with: { (snapshot) in
+            let usersDict = snapshot.value as? NSDictionary
+            print(type(of: usersDict))
+            print(usersDict)
+            let email = usersDict?["email"] as? String
+            //let userDetails = usersDict.object(forKey: self.user!.uid) as AnyObject?
+            print(email)
+            self.emailLabel.text = email
+            
+        })
+        
+       
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func didTapChangePhoto(_ sender: AnyObject) {
+
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
