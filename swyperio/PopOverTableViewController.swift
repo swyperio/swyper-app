@@ -10,6 +10,8 @@ import UIKit
 
 class PopOverTableViewController: UITableViewController {
 
+    weak var createServiceViewController: CreateServiceViewController? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +20,10 @@ class PopOverTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        clearsSelectionOnViewWillAppear = true
+        preferredContentSize = CGSize(width: 320, height: CGFloat(44))
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "tableCell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +35,7 @@ class PopOverTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
