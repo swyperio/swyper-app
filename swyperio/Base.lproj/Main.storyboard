@@ -19,7 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AaA-xP-RRe"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AaA-xP-RRe">
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="tK3-Tf-e0f" appends="YES" id="pOL-FH-69f"/>
+                                </connections>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfd-8j-ag7">
                                 <frame key="frameInset" minX="103" minY="43" width="161" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -54,14 +59,10 @@
                                     <segue destination="Zme-Eu-6xd" kind="unwind" identifier="signOutSegue" unwindAction="signOutWithSegue:" id="ML0-3R-OLK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6P-FO-OCg">
-                                <frame key="frameInset" minX="140" minY="219" width="95" height="30"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="h8l-NI-lpG">
+                                <frame key="frameInset" minX="177" minY="143" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="change photo"/>
-                                <connections>
-                                    <action selector="didTapChangePhoto:" destination="9pv-A4-QxB" eventType="touchUpInside" id="2p3-ul-CTX"/>
-                                </connections>
-                            </button>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -80,10 +81,17 @@
                     <tabBarItem key="tabBarItem" title="Profile" image="userIcon" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="emailLabel" destination="Wfd-8j-ag7" id="yk7-f1-0Jc"/>
+                        <outlet property="profilePicImageLoader" destination="h8l-NI-lpG" id="HpH-WN-tIC"/>
+                        <outlet property="profilePicture" destination="AaA-xP-RRe" id="Kcf-WA-Mtb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
                 <exit id="Zme-Eu-6xd" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="tK3-Tf-e0f">
+                    <connections>
+                        <action selector="didTapProfilePicture:" destination="9pv-A4-QxB" id="R9I-NH-iYo"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
