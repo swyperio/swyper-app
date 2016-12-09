@@ -10,6 +10,7 @@ target 'swyperio' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod ‘Firebase/Storage’
 
   target 'swyperioTests' do
     inherit! :search_paths

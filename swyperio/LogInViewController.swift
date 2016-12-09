@@ -87,6 +87,8 @@ class LogInViewController: UIViewController {
                 return
             }
             self.setDisplayName(user!)
+            FIRDatabase.database().reference().child("user_profile").child("\(user!.uid)/email").setValue(email)
+            
             self.performSegue(withIdentifier: "signInSegue", sender: nil)
         }
     }
