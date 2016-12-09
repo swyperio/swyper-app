@@ -30,7 +30,24 @@ class ExchangeViewController: UIViewController {
         // Centres the map on the initial location
         centerMapOnLocation(location: INITIAL_LOCATION)
         
+        // TODO remove after, only for testing to see if the pin works
+        let event = Event(
+            name: "Test name",
+            coordinate: CLLocationCoordinate2D(latitude: 40.729508, longitude: -73.997181),
+            startTime: NSDate(),
+            endTime: NSDate(timeIntervalSinceReferenceDate: 3600.0),
+            maxReservations: 5,
+            information: "Test description"
+        )
+        exchangeView.addAnnotation(event)
+        
     } // End of the viewDidLoad function
+    
+    
+    
+    
+    
+    
     
     // Note: Not really required now
 //    override func didReceiveMemoryWarning() {
