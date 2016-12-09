@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		54ECA4D1A6ABD5C3E549BFC2 /* Pods_swyperioUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 213EB8D0FE8C739FC43FD524 /* Pods_swyperioUITests.framework */; };
 		6382FA20CA25B339DA2B07D5 /* Pods_swyperioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9671F8F2B7BA4E86E7597614 /* Pods_swyperioTests.framework */; };
+		96D2E92F1DFB261C007E54D6 /* ExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D2E92E1DFB261C007E54D6 /* ExchangeViewController.swift */; };
 		CE439A5F1DF5CFE800CB3BE2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE439A5E1DF5CFE800CB3BE2 /* Constants.swift */; };
 		CE80E0841DF06D68001F54F2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80E0831DF06D68001F54F2 /* AppState.swift */; };
 		CE80E08E1DF1154A001F54F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE80E08D1DF1154A001F54F2 /* GoogleService-Info.plist */; };
@@ -52,6 +53,7 @@
 		5FDD0B40BD6D0BBFB5CD6F6A /* Pods_swyperio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swyperio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE9A1E8FA458A025ECEFAF5 /* Pods-swyperioUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swyperioUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swyperioUITests/Pods-swyperioUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9671F8F2B7BA4E86E7597614 /* Pods_swyperioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swyperioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96D2E92E1DFB261C007E54D6 /* ExchangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeViewController.swift; sourceTree = "<group>"; };
 		C82290E24FBF7AA9A8698243 /* Pods-swyperio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swyperio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swyperio/Pods-swyperio.debug.xcconfig"; sourceTree = "<group>"; };
 		CBF96CB2D07CB2BAC548BE0A /* Pods-swyperioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swyperioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swyperioTests/Pods-swyperioTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE439A5E1DF5CFE800CB3BE2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				CE91206B1DE3AE1200E61C4B /* LogInViewController.swift */,
 				CE9120331DE3A69500E61C4B /* ProfileViewController.swift */,
 				CE9120651DE3AC1400E61C4B /* CreateServiceViewController.swift */,
+				96D2E92E1DFB261C007E54D6 /* ExchangeViewController.swift */,
 				CEE1E70A1DFA16E600C9B6A7 /* PopUpViewController.swift */,
 				CEE1E70C1DFA20E300C9B6A7 /* PopUpView.swift */,
 				CE9120371DE3A69500E61C4B /* Main.storyboard */,
@@ -485,6 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE91206C1DE3AE1200E61C4B /* LogInViewController.swift in Sources */,
+				96D2E92F1DFB261C007E54D6 /* ExchangeViewController.swift in Sources */,
 				CE9120321DE3A69500E61C4B /* AppDelegate.swift in Sources */,
 				CEFD5BA61DF5A55E00CC46D3 /* GoogleAnalyticsEvents.swift in Sources */,
 				CEE1E70D1DFA20E300C9B6A7 /* PopUpView.swift in Sources */,
