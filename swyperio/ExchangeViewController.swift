@@ -100,9 +100,6 @@ class ExchangeViewController: UIViewController, MKMapViewDelegate {
     
     
     
-    
-    
-    
     // Note: Not really required now
 //    override func didReceiveMemoryWarning() {
 //        super.didReceiveMemoryWarning()
