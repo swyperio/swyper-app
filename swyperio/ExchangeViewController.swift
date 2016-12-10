@@ -60,6 +60,7 @@ class ExchangeViewController: UIViewController, MKMapViewDelegate {
         
         let alert = UIAlertController(title: eventName, message: "\(eventReservations)", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Reserve", style: .default, handler: {action in self.handleReserveButtonTapped(event: event)}))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     
