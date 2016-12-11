@@ -37,7 +37,8 @@ class ExchangeViewController: UIViewController {
             startTime: NSDate(),
             endTime: NSDate(timeIntervalSinceReferenceDate: 3600.0),
             maxReservations: 5,
-            information: "Test description"
+            information: "Test description",
+            userID: "thisisatestuserid"
         )
         exchangeView.addAnnotation(event)
         

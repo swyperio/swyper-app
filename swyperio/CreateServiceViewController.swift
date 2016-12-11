@@ -54,18 +54,23 @@ UINavigationControllerDelegate {
         super.viewDidLoad()
         
         
-        var myUserID = user?.uid
+        let myUserID = user?.uid
         
         let testEvent = Event(
-            name: "Test name",
-            coordinate: CLLocationCoordinate2D(latitude: 40.729508, longitude: -73.997181),
+            name: "Test name unique 2",
+            coordinate: CLLocationCoordinate2D(latitude: 45.729508, longitude: -78.997181),
             startTime: NSDate(),
             endTime: NSDate(timeIntervalSinceReferenceDate: 3600.0),
-            maxReservations: 5,
-            information: "Test description",
+            maxReservations: 7,
+            information: "Test description unique 2",
             userID: myUserID!
         )
-        uploadEvent(testEvent)
+        FirebaseHelperFunctions.uploadEvent(testEvent)
+        testEvent.maxReservations = 6
+        FirebaseHelperFunctions.uploadEvent(testEvent)
+        //let allEvents =
+        
+        //FirebaseHelperFunctions.retrieveAllEvents()
         
         
         
@@ -101,30 +106,9 @@ UINavigationControllerDelegate {
     }
     
     //function for uploading an event to firebase
-    func uploadEvent(_ event: Event){
-        print("begin uploading event")
-        
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEE, dd MMM yyy hh:mm:ss +zzzz"
-        
-        let ref = FIRDatabase.database().reference()
-        
-        ref.child("events").child(event.uniqueID).setValue(["user_id": event.userID,
-                                                            "name": event.name,
-                                                            "latitude": event.coordinate.latitude,
-                                                            "longitude": event.coordinate.longitude,
-                                                            "start_time": dateFormatter.string(from: event.startTime as Date),
-                                                            "end_time": dateFormatter.string(from: event.endTime as Date),
-                                                            "max_reservations": event.maxReservations,
-                                                            "information": event.information,])
-        
-        print("end uploading event")
-    }
     
-    func retrieveAllEvents(){
-        
-    }
+    
+    
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
