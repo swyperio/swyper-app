@@ -54,23 +54,6 @@ UINavigationControllerDelegate {
         super.viewDidLoad()
         
         
-        let myUserID = user?.uid
-        
-        let testEvent = Event(
-            name: "Test name unique 2",
-            coordinate: CLLocationCoordinate2D(latitude: 45.729508, longitude: -78.997181),
-            startTime: NSDate(),
-            endTime: NSDate(timeIntervalSinceReferenceDate: 3600.0),
-            maxReservations: 7,
-            information: "Test description unique 2",
-            userID: myUserID!
-        )
-        FirebaseHelperFunctions.uploadEvent(testEvent)
-        testEvent.maxReservations = 6
-        FirebaseHelperFunctions.uploadEvent(testEvent)
-        //let allEvents =
-        
-        //FirebaseHelperFunctions.retrieveAllEvents()
         
         
         
@@ -103,6 +86,8 @@ UINavigationControllerDelegate {
     
     @IBAction func didTapDoneButton(_ sender: AnyObject) {
         print("tapping done button")
+        
+        
     }
     
     //function for uploading an event to firebase
