@@ -12,6 +12,7 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class FirebaseHelperFunctions: NSObject {
+    static var allEvents = [Event]()
     
     
     
@@ -19,6 +20,7 @@ class FirebaseHelperFunctions: NSObject {
         if values are updated in an event and this function is called, the db will update the
         event information and will not create a new event
      */
+    
     static func uploadEvent(_ event: Event){
         print("begin uploading event")
         let databaseRef = FIRDatabase.database().reference()
@@ -36,34 +38,36 @@ class FirebaseHelperFunctions: NSObject {
         print("end uploading event")
     }
     
-    /*static func deleteEvent(_ event: Event){
-        print("begin uploading event")
+    /*  deletes an event from firebase
+    */
+    static func deleteEvent(_ event: Event){
         let databaseRef = FIRDatabase.database().reference()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEE, dd MMM yyy hh:mm:ss +zzzz"
-        databaseRef.removeValue(completionBlock: databaseRef.child("events").child(event.uniqueID))
-    }*/
+        //let dateFormatter = DateFormatter()
+        //dateFormatter.dateFormat = "EEE, dd MMM yyy hh:mm:ss +zzzz"
+        //databaseRef.removeValue(completionBlock: databaseRef.child("events").child(event.uniqueID))
+        databaseRef.child("events/\(event.uniqueID)").removeValue()
+
+        print("event deleted")
+
+    }
     
     
     /*  Returns a list of all events from the firebase db
         NOTE: STILL NEEDS WORK - callback function 'observe' returns after the actual function so allEvents
         is never populated when returned
+     
+        currently just updates the all events object
      */
-    static func retrieveAllEvents() -> Array<Event>{
-        print("begin retrieving events")
-
-        var allEvents = [Event]()
+    static func updateAllEventsObject(){
+        print("updating allEvents object")
         let databaseRef = FIRDatabase.database().reference()
         databaseRef.child("events").observe(FIRDataEventType.value, with: { (snapshot) in
             let allEventsDict = snapshot.value as? NSDictionary
-            //let singleEvent = allEventsDict?["741BC0BC-655F-4DE4-B756-2BF14171FC7D"] as? NSDictionary
-            //print("FUCKING LOOK OVER HERE")
-            //print(allEventsDict?["BD6229EC-F6FC-4C8E-8E0F-89FF1209B6CE"]!)
-            //print(singleEvent?["name"])
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "EEE, dd MMM yyy hh:mm:ss +zzzz"
             for(_, eventInfo) in allEventsDict!{
                 let tempDict = eventInfo as? NSDictionary
+                
                 let eventToAdd = Event(name: tempDict?["name"] as! String ,
                                        coordinate: CLLocationCoordinate2D(
                                         latitude: tempDict?["latitude"] as! CLLocationDegrees,
@@ -73,25 +77,19 @@ class FirebaseHelperFunctions: NSObject {
                                        maxReservations: tempDict?["max_reservations"] as! Int,
                                        information: tempDict?["information"] as! String,
                                        userID: tempDict?["user_id"] as! String)
+              
                 allEvents.append(eventToAdd)
+                
 
                 
             }
-            print("before")
-            print(allEvents)
-
+            print("allEvents object has been updated")
             
 
-            
-            
+        
         })
-        print("after")
 
-        print(allEvents)
-        return allEvents
-        
-
-        
+       
         
         
     }
