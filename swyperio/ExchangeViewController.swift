@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class ExchangeViewController: UIViewController {
+class ExchangeViewController: UIViewController, MKMapViewDelegate {
     // Sets the initial location to be at Bobst Library
     let INITIAL_LOCATION = CLLocation(latitude: 40.729508, longitude: -73.997181)
     
@@ -41,12 +41,63 @@ class ExchangeViewController: UIViewController {
             userID: "thisisatestuserid"
         )
         exchangeView.addAnnotation(event)
+        // make the exchangeView its own delegate so that its annotations can have buttons
+        exchangeView.delegate = self
         
     } // End of the viewDidLoad function
     
     
     
+    /*
+     These methods specify how an MKAnnotationView should look when tapped in a map view
+     */
     
+    // This method determines the action taken when an annotation's button is tapped
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
+        let event = view.annotation as! Event
+        let eventName = event.name
+        let eventReservations = event.maxReservations
+        
+        let alert = UIAlertController(title: eventName, message: "\(eventReservations)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Reserve", style: .default, handler: {action in self.handleReserveButtonTapped(event: event)}))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    // This method adds a button to an MKAnnotationView
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        let identifier = "Event"
+        
+        if annotation is Event {
+        
+            if let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) {
+                
+                annotationView.annotation = annotation
+                return annotationView
+            }
+            else {
+                
+                let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                annotationView.isEnabled = true
+                annotationView.canShowCallout = true
+                
+                let button = UIButton(type: .detailDisclosure)
+                annotationView.rightCalloutAccessoryView = button
+                return annotationView
+            }
+        }
+        
+        return nil
+    }
+    
+    // This helper function decrements the number of reservations for a given event when the event button in an annotation's alert view is pressed
+    func handleReserveButtonTapped(event: Event) {
+        print("PREVIOUS NUM OF RESERVATIONS: \(event.maxReservations)")
+        event.maxReservations -= 1
+        print("CURRENT NUM OF RESERVATIONS: \(event.maxReservations)")
+    }
     
     
     
