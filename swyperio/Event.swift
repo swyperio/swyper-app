@@ -14,11 +14,11 @@ import MapKit
 // String: Event name <-- only required if an event, otherwise defaults to the host user's name
 // CLLocation: The location of the event (we'll have a global map of string->CLLocation). Instantiate one via CLLocation(latitude: 40.729508, longitude: -73.997181).
 // Date: startTime
-    // If a user: let startTime = NSDate()
-    // If an event organiser: let startTime = some input from a datepicker
+// If a user: let startTime = NSDate()
+// If an event organiser: let startTime = some input from a datepicker
 // Date: endTime
-    // If a user: let endTime = NSDate(timeIntervalSinceReferenceDate: 3600.0) // Sets a default endTime of 1 person
-    // If an event organiser: let endTime = some input from a datepicker, or just show how of a duration in hours, calculate the endTime, and save that value
+// If a user: let endTime = NSDate(timeIntervalSinceReferenceDate: 3600.0) // Sets a default endTime of 1 person
+// If an event organiser: let endTime = some input from a datepicker, or just show how of a duration in hours, calculate the endTime, and save that value
 // int: maxReservations <-- some maximum number of people that can "reserve" a spot on the event
 
 class Event: NSObject, MKAnnotation {
@@ -28,15 +28,19 @@ class Event: NSObject, MKAnnotation {
     var endTime: NSDate
     var maxReservations: Int
     var information: String
-
-//    init(withName name: String, withCoordinate coordinate: CLLocationCoordinate2D, withStartTime startTime: Date, withEndTime endTime: Date, withMaxReservations maxReservations: Int, withInformation information: String) {
-    init(name: String, coordinate: CLLocationCoordinate2D, startTime: NSDate, endTime: NSDate, maxReservations: Int, information: String) {
+    var userID: String
+    var uniqueID: String
+    
+    //    init(withName name: String, withCoordinate coordinate: CLLocationCoordinate2D, withStartTime startTime: Date, withEndTime endTime: Date, withMaxReservations maxReservations: Int, withInformation information: String) {
+    init(name: String, coordinate: CLLocationCoordinate2D, startTime: NSDate, endTime: NSDate, maxReservations: Int, information: String, userID: String) {
         self.name = name
         self.coordinate = coordinate
         self.startTime = startTime
         self.endTime = endTime
         self.maxReservations = maxReservations
         self.information = information
+        self.userID = userID
+        self.uniqueID = UUID().uuidString       //creates unique id for the vent
         super.init()
     } // End of the init method
     
