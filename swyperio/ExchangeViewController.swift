@@ -25,12 +25,16 @@ class ExchangeViewController: UIViewController, MKMapViewDelegate {
         exchangeView.setRegion(coordinateRegion, animated: true)
     }
     
+//    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+//        exchangeView.addAnnotations(FirebaseHelperFunctions.allEvents)
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Centres the map on the initial location
         centerMapOnLocation(location: INITIAL_LOCATION)
-        exchangeView.addAnnotations(FirebaseHelperFunctions.allEvents)
+        // exchangeView.addAnnotations(FirebaseHelperFunctions.allEvents)
         exchangeView.delegate = self
         
     } // End of the viewDidLoad function
@@ -96,6 +100,10 @@ class ExchangeViewController: UIViewController, MKMapViewDelegate {
         
         print("UPLOADING EVENT TO FIREBASE")
         FirebaseHelperFunctions.uploadEvent(event)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        exchangeView.addAnnotations(FirebaseHelperFunctions.allEvents)
     }
     
     

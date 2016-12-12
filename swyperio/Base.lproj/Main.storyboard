@@ -236,6 +236,7 @@
                     </view>
                     <connections>
                         <outlet property="dateTextField" destination="scv-aF-pTO" id="rBc-qc-W1m"/>
+                        <outlet property="diningHallPicker" destination="M05-tC-PgC" id="Uc7-uq-LXF"/>
                         <outlet property="nameTextField" destination="Y4B-M2-faU" id="iNt-0P-LcG"/>
                     </connections>
                 </viewController>
