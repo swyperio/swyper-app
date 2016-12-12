@@ -24,19 +24,19 @@ import MapKit
 class Event: NSObject, MKAnnotation {
     var name: String
     var coordinate: CLLocationCoordinate2D // NOTE: To implement MKAnnotation, you must implement coordinate
-    var startTime: NSDate
-    var endTime: NSDate
+    var startTime: Date
+    var endTime: Date
     var maxReservations: Int
     var information: String
     var userID: String
     var uniqueID: String
     
     //    init(withName name: String, withCoordinate coordinate: CLLocationCoordinate2D, withStartTime startTime: Date, withEndTime endTime: Date, withMaxReservations maxReservations: Int, withInformation information: String) {
-    init(name: String, coordinate: CLLocationCoordinate2D, startTime: NSDate, endTime: NSDate, maxReservations: Int, information: String, userID: String, uniqueID: String = UUID().uuidString) {
+    init(name: String, coordinate: CLLocationCoordinate2D, startTime: Date, endTime: Date, maxReservations: Int, information: String, userID: String, uniqueID: String = UUID().uuidString) {
         self.name = name
         self.coordinate = coordinate
-        self.startTime = startTime
-        self.endTime = endTime
+        self.startTime = startTime as Date
+        self.endTime = endTime as Date
         self.maxReservations = maxReservations
         self.information = information
         self.userID = userID

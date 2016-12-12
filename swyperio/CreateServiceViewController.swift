@@ -34,19 +34,21 @@ UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var endTimeTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     var user = FIRAuth.auth()?.currentUser
+    var dateChosen: String? = nil
     
-    let diningHallsDictionary: [String:(lat: Double, lon: Double)] = ["Weinstein": (40.731096, -73.994937),
-                                                                "Kimmel":(40.729937, -73.997827),
-                                                                "Lipton":(40.731636, -73.999545),
-                                                                "Third North":(40.731394, -73.988190),
-                                                                "UHall":(40.733710, -73.989196),
-                                                                "Palladium":(40.733308, -73.988199),
-                                                                "Warren Weaver":(40.728669, -73.995662),
-                                                                "Tisch Hall":(40.728765, -73.996184),
-                                                                "Bobst":(40.729435, -73.997212)]
+    let diningHallsDictionary: [String:CLLocationCoordinate2D] = ["Weinstein": CLLocationCoordinate2D(latitude: 40.731096, longitude: -73.994937),
+                                                                      "Kimmel":CLLocationCoordinate2D(latitude: 40.729937, longitude: -73.997827),
+                                                                      "Lipton":CLLocationCoordinate2D(latitude: 40.731636, longitude: -73.999545),
+                                                                      "Third North":CLLocationCoordinate2D(latitude: 40.731394, longitude: -73.988190),
+                                                                      "UHall":CLLocationCoordinate2D(latitude: 40.733710, longitude: -73.989196),
+                                                                      "Palladium":CLLocationCoordinate2D(latitude: 40.733308, longitude: -73.988199),
+                                                                      "Warren Weaver":CLLocationCoordinate2D(latitude: 40.728669, longitude: -73.995662),
+                                                                      "Tisch Hall":CLLocationCoordinate2D(latitude: 40.728765, longitude: -73.996184),
+                                                                      "Bobst":CLLocationCoordinate2D(latitude: 40.729435, longitude: -73.997212)]
     
     
     let datePickerView: UIDatePicker = UIDatePicker()
+    var diningHallPickerDataSource = [String]()
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         
@@ -70,7 +72,8 @@ UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return Array(diningHallsDictionary.keys)[row]
+        self.diningHallPickerDataSource = Array(diningHallsDictionary.keys)
+        return diningHallPickerDataSource[row]
     }
     
     override func viewDidLoad() {
@@ -86,7 +89,9 @@ UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     func tapOutsideDatePicker() {
         
-        self.datePickerView.isHidden = true
+        // self.datePickerView.isHidden = true
+        self.dateChosen = "\(datePickerView.date)"
+        self.datePickerView.removeFromSuperview()
         self.dateTextField.text = "\(self.datePickerView.date)"
     }
     
@@ -99,13 +104,18 @@ UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
         
         print("tapping done button")
         
-        let latitude = diningHallsDictionary[String(diningHallPicker.selectedRow(inComponent: 0))]?.lat
-        let longitude = diningHallsDictionary[String(diningHallPicker.selectedRow(inComponent: 0))]?.lon
+        let location = diningHallsDictionary[diningHallPickerDataSource[diningHallPicker.selectedRow(inComponent: 0)]]
         
-        let eventToCreate = Event(name: nameTextField.text!, coordinate: CLLocationCoordinate2D(latitude: latitude!, longitude: longitude!), startTime: datePickerView.date as NSDate, endTime: datePickerView.date.addingTimeInterval(3600) as NSDate, maxReservations: 1, information: "NO INFORMATION", userID: (FIRAuth.auth()?.currentUser?.uid)!)
+        let eventToCreate = Event(name: nameTextField.text!, coordinate: location!, startTime: datePickerView.date, endTime: datePickerView.date.addingTimeInterval(3600), maxReservations: 1, information: "NO INFORMATION", userID: (FIRAuth.auth()?.currentUser?.uid)!)
+        
+        print(diningHallPicker.selectedRow(inComponent: 0))
+
+        //let eventToCreate = Event(name: nameTextField.text!, coordinate: location!, startTime: Date(), endTime: Date(), maxReservations: 1, information: "NO INFORMATION", userID: (FIRAuth.auth()?.currentUser?.uid)!)
+
         
         FirebaseHelperFunctions.uploadEvent(eventToCreate)
         FirebaseHelperFunctions.updateAllEventsObject()
+        self.performSegue(withIdentifier: "cancelCreateServiceSegue", sender: nil)
     }
     
     //function for uploading an event to firebase

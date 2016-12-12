@@ -171,7 +171,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="I67-Ay-cLP">
                                             <connections>
-                                                <segue destination="wjO-xK-fiv" kind="unwind" identifier="doneCreateServiceSegue" unwindAction="doneCreateServiceWithSegue:" id="vvh-SX-umk"/>
+                                                <action selector="didTapDoneButton:" destination="GTv-oM-bV0" id="qdK-yb-el5"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
