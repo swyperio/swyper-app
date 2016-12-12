@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Firebase
 
 class ExchangeViewController: UIViewController, MKMapViewDelegate {
     // Sets the initial location to be at Bobst Library
@@ -29,19 +30,7 @@ class ExchangeViewController: UIViewController, MKMapViewDelegate {
         
         // Centres the map on the initial location
         centerMapOnLocation(location: INITIAL_LOCATION)
-        
-        // TODO remove after, only for testing to see if the pin works
-        let event = Event(
-            name: "Test name",
-            coordinate: CLLocationCoordinate2D(latitude: 40.729508, longitude: -73.997181),
-            startTime: NSDate(),
-            endTime: NSDate(timeIntervalSinceReferenceDate: 3600.0),
-            maxReservations: 5,
-            information: "Test description",
-            userID: "thisisatestuserid"
-        )
-        exchangeView.addAnnotation(event)
-        // make the exchangeView its own delegate so that its annotations can have buttons
+        exchangeView.addAnnotations(FirebaseHelperFunctions.allEvents)
         exchangeView.delegate = self
         
     } // End of the viewDidLoad function
@@ -51,7 +40,6 @@ class ExchangeViewController: UIViewController, MKMapViewDelegate {
     /*
      These methods specify how an MKAnnotationView should look when tapped in a map view
      */
-    
     // This method determines the action taken when an annotation's button is tapped
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
@@ -94,9 +82,20 @@ class ExchangeViewController: UIViewController, MKMapViewDelegate {
     
     // This helper function decrements the number of reservations for a given event when the event button in an annotation's alert view is pressed
     func handleReserveButtonTapped(event: Event) {
-        print("PREVIOUS NUM OF RESERVATIONS: \(event.maxReservations)")
+        
         event.maxReservations -= 1
-        print("CURRENT NUM OF RESERVATIONS: \(event.maxReservations)")
+        
+        if event.maxReservations == 0 {
+            
+            exchangeView.deselectAnnotation(event, animated: true)
+            exchangeView.removeAnnotation(event)
+            FirebaseHelperFunctions.deleteEvent(event)
+            // FirebaseHelperFunctions.updateAllEventsObject()
+            return
+        }
+        
+        print("UPLOADING EVENT TO FIREBASE")
+        FirebaseHelperFunctions.uploadEvent(event)
     }
     
     

@@ -32,7 +32,7 @@ class Event: NSObject, MKAnnotation {
     var uniqueID: String
     
     //    init(withName name: String, withCoordinate coordinate: CLLocationCoordinate2D, withStartTime startTime: Date, withEndTime endTime: Date, withMaxReservations maxReservations: Int, withInformation information: String) {
-    init(name: String, coordinate: CLLocationCoordinate2D, startTime: NSDate, endTime: NSDate, maxReservations: Int, information: String, userID: String) {
+    init(name: String, coordinate: CLLocationCoordinate2D, startTime: NSDate, endTime: NSDate, maxReservations: Int, information: String, userID: String, uniqueID: String = UUID().uuidString) {
         self.name = name
         self.coordinate = coordinate
         self.startTime = startTime
@@ -40,7 +40,15 @@ class Event: NSObject, MKAnnotation {
         self.maxReservations = maxReservations
         self.information = information
         self.userID = userID
-        self.uniqueID = UUID().uuidString       //creates unique id for the vent
+        self.uniqueID = uniqueID
+        /*if uniqueID != nil {
+            self.uniqueID = uniqueID!
+            // self.uniqueID = UUID().uuidString       //creates unique id for the vent
+        }
+        else {
+            self.uniqueID = UUID().uuidString       //creates unique id for the vent
+            // self.uniqueID = uniqueID!
+        }*/
         super.init()
     } // End of the init method
     

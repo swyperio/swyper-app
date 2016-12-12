@@ -61,39 +61,32 @@ class FirebaseHelperFunctions: NSObject {
     static func updateAllEventsObject(){
         print("updating allEvents object")
         let databaseRef = FIRDatabase.database().reference()
-        databaseRef.child("events").observe(FIRDataEventType.value, with: { (snapshot) in
+        databaseRef.child("events").observeSingleEvent(of: FIRDataEventType.value, with: { (snapshot) in
             let allEventsDict = snapshot.value as? NSDictionary
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "EEE, dd MMM yyy hh:mm:ss +zzzz"
-            for(_, eventInfo) in allEventsDict!{
-                let tempDict = eventInfo as? NSDictionary
+            if let eventsDictionary = allEventsDict {
+                for(uniqueEventID, eventInfo) in eventsDictionary{
+                    let tempDict = eventInfo as? NSDictionary
                 
-                let eventToAdd = Event(name: tempDict?["name"] as! String ,
-                                       coordinate: CLLocationCoordinate2D(
-                                        latitude: tempDict?["latitude"] as! CLLocationDegrees,
-                                        longitude: tempDict?["longitude"] as! CLLocationDegrees),
-                                       startTime: (dateFormatter.date(from: tempDict?["start_time"] as! String) as? NSDate)!,
-                                       endTime: (dateFormatter.date(from: tempDict?["end_time"] as! String) as? NSDate!)!,
-                                       maxReservations: tempDict?["max_reservations"] as! Int,
-                                       information: tempDict?["information"] as! String,
-                                       userID: tempDict?["user_id"] as! String)
+                    let eventToAdd = Event(name: tempDict?["name"] as! String ,
+                                           coordinate: CLLocationCoordinate2D(
+                                            latitude: tempDict?["latitude"] as! CLLocationDegrees,
+                                            longitude: tempDict?["longitude"] as! CLLocationDegrees),
+                                           startTime: (dateFormatter.date(from: tempDict?["start_time"] as! String) as? NSDate)!,
+                                           endTime: (dateFormatter.date(from: tempDict?["end_time"] as! String) as? NSDate!)!,
+                                           maxReservations: tempDict?["max_reservations"] as! Int,
+                                           information: tempDict?["information"] as! String,
+                                           userID: tempDict?["user_id"] as! String,
+                                           uniqueID: uniqueEventID as! String)
               
-                allEvents.append(eventToAdd)
-                
-
-                
+                    allEvents.append(eventToAdd)
+                }
+            }
+            else {
+                print("NO EVENTS FOUND IN allEventsDict")
             }
             print("allEvents object has been updated")
-            
-
-        
         })
-
-       
-        
-        
     }
-    
-    
-
 }
