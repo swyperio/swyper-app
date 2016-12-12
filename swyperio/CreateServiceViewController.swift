@@ -24,9 +24,10 @@ class CreateServiceViewController: UIViewController, UITextFieldDelegate, UIImag
     // If an event organiser: let endTime = some input from a datepicker, or just show how of a duration in hours, calculate the endTime, and save that value
     // int: maxReservations <-- some maximum number of people that can "reserve" a spot on the event
     
-UINavigationControllerDelegate {
+UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     // @IBOutlet weak var serviceDetailTable: UITableView!
     
+    @IBOutlet weak var diningHallPicker: UIPickerView!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var startTimeTextField: UITextField!
@@ -34,8 +35,18 @@ UINavigationControllerDelegate {
     @IBOutlet weak var descriptionTextField: UITextField!
     var user = FIRAuth.auth()?.currentUser
     
+    let diningHallsDictionary: [String:(lat: Double, lon: Double)] = ["Weinstein": (40.731096, -73.994937),
+                                                                "Kimmel":(40.729937, -73.997827),
+                                                                "Lipton":(40.731636, -73.999545),
+                                                                "Third North":(40.731394, -73.988190),
+                                                                "UHall":(40.733710, -73.989196),
+                                                                "Palladium":(40.733308, -73.988199),
+                                                                "Warren Weaver":(40.728669, -73.995662),
+                                                                "Tisch Hall":(40.728765, -73.996184),
+                                                                "Bobst":(40.729435, -73.997212)]
     
-    let datePickerView: UIDatePicker = UIDatePicker()//= CGRect(x: UIScreen.main.bounds.midX - 150, y: UIScreen.main.bounds.midY - 150, width: 300, height: 300))
+    
+    let datePickerView: UIDatePicker = UIDatePicker()
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         
@@ -50,25 +61,25 @@ UINavigationControllerDelegate {
         return true
     }
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return diningHallsDictionary.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return Array(diningHallsDictionary.keys)[row]
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        
-        
         // Do any additional setup after loading the view.
-        /*
-         self.serviceDetailTable.register(UITableViewCell.self, forCellReuseIdentifier: "nameCell")
-         
-         serviceDetailTable.delegate = self
-         serviceDetailTable.dataSource = self
-         
-         serviceDetailTable.setNeedsLayout()
-         serviceDetailTable.layoutIfNeeded()
-         */
+        diningHallPicker.delegate = self
+        diningHallPicker.dataSource = self
         dateTextField.delegate = self
-        //let tapGesture = UITapGestureRecognizer(target: self, action: Selector(("tapOutsideDatePicker:")))
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CreateServiceViewController.tapOutsideDatePicker))
         self.view.addGestureRecognizer(tapGesture)
     }
@@ -85,9 +96,16 @@ UINavigationControllerDelegate {
     }
     
     @IBAction func didTapDoneButton(_ sender: AnyObject) {
+        
         print("tapping done button")
         
+        let latitude = diningHallsDictionary[String(diningHallPicker.selectedRow(inComponent: 0))]?.lat
+        let longitude = diningHallsDictionary[String(diningHallPicker.selectedRow(inComponent: 0))]?.lon
         
+        let eventToCreate = Event(name: nameTextField.text!, coordinate: CLLocationCoordinate2D(latitude: latitude!, longitude: longitude!), startTime: datePickerView.date as NSDate, endTime: datePickerView.date.addingTimeInterval(3600) as NSDate, maxReservations: 1, information: "NO INFORMATION", userID: (FIRAuth.auth()?.currentUser?.uid)!)
+        
+        FirebaseHelperFunctions.uploadEvent(eventToCreate)
+        FirebaseHelperFunctions.updateAllEventsObject()
     }
     
     //function for uploading an event to firebase

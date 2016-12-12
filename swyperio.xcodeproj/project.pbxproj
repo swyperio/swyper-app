@@ -22,8 +22,6 @@
 		CE9120541DE3A69500E61C4B /* swyperioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120531DE3A69500E61C4B /* swyperioUITests.swift */; };
 		CE9120661DE3AC1400E61C4B /* CreateServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9120651DE3AC1400E61C4B /* CreateServiceViewController.swift */; };
 		CE91206C1DE3AE1200E61C4B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91206B1DE3AE1200E61C4B /* LogInViewController.swift */; };
-		CEE1E70B1DFA16E600C9B6A7 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE1E70A1DFA16E600C9B6A7 /* PopUpViewController.swift */; };
-		CEE1E70D1DFA20E300C9B6A7 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE1E70C1DFA20E300C9B6A7 /* PopUpView.swift */; };
 		CEFD5BA61DF5A55E00CC46D3 /* GoogleAnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD5BA51DF5A55E00CC46D3 /* GoogleAnalyticsEvents.swift */; };
 		CEFF17AF1DFE0C6100251C80 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEFF17AE1DFE0C6100251C80 /* GoogleService-Info.plist */; };
 		CEFF17B51DFE2AE300251C80 /* FirebaseHelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF17B41DFE2AE300251C80 /* FirebaseHelperFunctions.swift */; };
@@ -77,8 +75,6 @@
 		CE9120651DE3AC1400E61C4B /* CreateServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateServiceViewController.swift; sourceTree = "<group>"; };
 		CE91206B1DE3AE1200E61C4B /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		CEC72A0B1DEF916900992D31 /* swyperio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = swyperio.entitlements; sourceTree = "<group>"; };
-		CEE1E70A1DFA16E600C9B6A7 /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopUpViewController.swift; path = ../PopUpViewController.swift; sourceTree = "<group>"; };
-		CEE1E70C1DFA20E300C9B6A7 /* PopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		CEFD5BA51DF5A55E00CC46D3 /* GoogleAnalyticsEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAnalyticsEvents.swift; sourceTree = "<group>"; };
 		CEFF17AE1DFE0C6100251C80 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CEFF17B41DFE2AE300251C80 /* FirebaseHelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelperFunctions.swift; sourceTree = "<group>"; };
@@ -152,11 +148,9 @@
 				CE91206B1DE3AE1200E61C4B /* LogInViewController.swift */,
 				CE9120331DE3A69500E61C4B /* ProfileViewController.swift */,
 				CE9120651DE3AC1400E61C4B /* CreateServiceViewController.swift */,
+				96D2E92E1DFB261C007E54D6 /* ExchangeViewController.swift */,
 				CEFF17B41DFE2AE300251C80 /* FirebaseHelperFunctions.swift */,
 				96D2E9301DFB350D007E54D6 /* Event.swift */,
-				96D2E92E1DFB261C007E54D6 /* ExchangeViewController.swift */,
-				CEE1E70A1DFA16E600C9B6A7 /* PopUpViewController.swift */,
-				CEE1E70C1DFA20E300C9B6A7 /* PopUpView.swift */,
 				CE9120371DE3A69500E61C4B /* Main.storyboard */,
 				CE9120311DE3A69500E61C4B /* AppDelegate.swift */,
 				CE80E0831DF06D68001F54F2 /* AppState.swift */,
@@ -498,13 +492,11 @@
 				96D2E92F1DFB261C007E54D6 /* ExchangeViewController.swift in Sources */,
 				CE9120321DE3A69500E61C4B /* AppDelegate.swift in Sources */,
 				CEFD5BA61DF5A55E00CC46D3 /* GoogleAnalyticsEvents.swift in Sources */,
-				CEE1E70D1DFA20E300C9B6A7 /* PopUpView.swift in Sources */,
 				CEFF17B51DFE2AE300251C80 /* FirebaseHelperFunctions.swift in Sources */,
 				CE80E0841DF06D68001F54F2 /* AppState.swift in Sources */,
 				CE439A5F1DF5CFE800CB3BE2 /* Constants.swift in Sources */,
 				CE9120661DE3AC1400E61C4B /* CreateServiceViewController.swift in Sources */,
 				CE9120341DE3A69500E61C4B /* ProfileViewController.swift in Sources */,
-				CEE1E70B1DFA16E600C9B6A7 /* PopUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
