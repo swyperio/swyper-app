@@ -26,6 +26,7 @@
 		CEE1E70D1DFA20E300C9B6A7 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE1E70C1DFA20E300C9B6A7 /* PopUpView.swift */; };
 		CEFD5BA61DF5A55E00CC46D3 /* GoogleAnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD5BA51DF5A55E00CC46D3 /* GoogleAnalyticsEvents.swift */; };
 		CEFF17AF1DFE0C6100251C80 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEFF17AE1DFE0C6100251C80 /* GoogleService-Info.plist */; };
+		CEFF17B51DFE2AE300251C80 /* FirebaseHelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF17B41DFE2AE300251C80 /* FirebaseHelperFunctions.swift */; };
 		D5AF357FCE0EB944465FED5B /* Pods_swyperio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FDD0B40BD6D0BBFB5CD6F6A /* Pods_swyperio.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		CEE1E70C1DFA20E300C9B6A7 /* PopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		CEFD5BA51DF5A55E00CC46D3 /* GoogleAnalyticsEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAnalyticsEvents.swift; sourceTree = "<group>"; };
 		CEFF17AE1DFE0C6100251C80 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CEFF17B41DFE2AE300251C80 /* FirebaseHelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelperFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				CE91206B1DE3AE1200E61C4B /* LogInViewController.swift */,
 				CE9120331DE3A69500E61C4B /* ProfileViewController.swift */,
 				CE9120651DE3AC1400E61C4B /* CreateServiceViewController.swift */,
+				CEFF17B41DFE2AE300251C80 /* FirebaseHelperFunctions.swift */,
 				96D2E9301DFB350D007E54D6 /* Event.swift */,
 				96D2E92E1DFB261C007E54D6 /* ExchangeViewController.swift */,
 				CEE1E70A1DFA16E600C9B6A7 /* PopUpViewController.swift */,
@@ -496,6 +499,7 @@
 				CE9120321DE3A69500E61C4B /* AppDelegate.swift in Sources */,
 				CEFD5BA61DF5A55E00CC46D3 /* GoogleAnalyticsEvents.swift in Sources */,
 				CEE1E70D1DFA20E300C9B6A7 /* PopUpView.swift in Sources */,
+				CEFF17B51DFE2AE300251C80 /* FirebaseHelperFunctions.swift in Sources */,
 				CE80E0841DF06D68001F54F2 /* AppState.swift in Sources */,
 				CE439A5F1DF5CFE800CB3BE2 /* Constants.swift in Sources */,
 				CE9120661DE3AC1400E61C4B /* CreateServiceViewController.swift in Sources */,
