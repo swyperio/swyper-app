@@ -71,6 +71,9 @@
                                 <state key="normal" title="swype AN EVENT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="GTv-oM-bV0" kind="presentation" id="hM5-df-age"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -365,4 +368,7 @@
         <image name="exchangeIcon" width="26" height="29"/>
         <image name="userIcon" width="23" height="22"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="DUw-Of-BSX"/>
+    </inferredMetricsTieBreakers>
 </document>

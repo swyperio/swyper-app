@@ -99,6 +99,7 @@ class ExchangeViewController: UIViewController, MKMapViewDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        print("ADDING ANNOTATIONS TO MAP AT VIEW WILL APPEAR")
         exchangeView.addAnnotations(FirebaseHelperFunctions.allEvents)
     }
     
