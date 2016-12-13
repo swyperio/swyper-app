@@ -25,10 +25,6 @@ class ExchangeViewController: UIViewController, MKMapViewDelegate {
         exchangeView.setRegion(coordinateRegion, animated: true)
     }
     
-//    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-//        exchangeView.addAnnotations(FirebaseHelperFunctions.allEvents)
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -94,7 +90,7 @@ class ExchangeViewController: UIViewController, MKMapViewDelegate {
             exchangeView.deselectAnnotation(event, animated: true)
             exchangeView.removeAnnotation(event)
             FirebaseHelperFunctions.deleteEvent(event)
-            // FirebaseHelperFunctions.updateAllEventsObject()
+            FirebaseHelperFunctions.updateAllEventsObject()
             return
         }
         

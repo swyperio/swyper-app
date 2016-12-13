@@ -30,9 +30,9 @@ UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var diningHallPicker: UIPickerView!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var startTimeTextField: UITextField!
     @IBOutlet weak var endTimeTextField: UITextField!
-    @IBOutlet weak var descriptionTextField: UITextField!
     var user = FIRAuth.auth()?.currentUser
     var dateChosen: String? = nil
     
@@ -106,12 +106,9 @@ UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
         
         let location = diningHallsDictionary[diningHallPickerDataSource[diningHallPicker.selectedRow(inComponent: 0)]]
         
-        let eventToCreate = Event(name: nameTextField.text!, coordinate: location!, startTime: datePickerView.date, endTime: datePickerView.date.addingTimeInterval(3600), maxReservations: 1, information: "NO INFORMATION", userID: (FIRAuth.auth()?.currentUser?.uid)!)
+        let eventToCreate = Event(name: nameTextField.text!, coordinate: location!, startTime: datePickerView.date, endTime: datePickerView.date.addingTimeInterval(3600), maxReservations: 1, information: descriptionTextField.text!, userID: (FIRAuth.auth()?.currentUser?.uid)!)
         
         print(diningHallPicker.selectedRow(inComponent: 0))
-
-        //let eventToCreate = Event(name: nameTextField.text!, coordinate: location!, startTime: Date(), endTime: Date(), maxReservations: 1, information: "NO INFORMATION", userID: (FIRAuth.auth()?.currentUser?.uid)!)
-
         
         FirebaseHelperFunctions.uploadEvent(eventToCreate)
         FirebaseHelperFunctions.updateAllEventsObject()

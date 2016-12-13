@@ -50,28 +50,6 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             }
         })
         
-        
-//                let event_1 = Event(
-//                    name: "Test name 1",
-//                    coordinate: CLLocationCoordinate2D(latitude: 40.729508, longitude: -73.997181),
-//                    startTime: NSDate(),
-//                    endTime: NSDate(timeIntervalSinceReferenceDate: 3600.0),
-//                    maxReservations: 5,
-//                    information: "Test description 1",
-//                    userID: (FIRAuth.auth()?.currentUser?.uid)!
-//                )
-//                let event_2 = Event(
-//                    name: "Test name 2",
-//                    coordinate: CLLocationCoordinate2D(latitude: 40.731636, longitude: -73.999545),
-//                    startTime: NSDate(),
-//                    endTime: NSDate(timeIntervalSinceReferenceDate: 3600.0),
-//                    maxReservations: 5,
-//                    information: "Test description 2",
-//                    userID: (FIRAuth.auth()?.currentUser?.uid)!
-//                )
-        
-//        FirebaseHelperFunctions.uploadEvent(event_1)
-//        FirebaseHelperFunctions.uploadEvent(event_2)
         FirebaseHelperFunctions.updateAllEventsObject()
         // Do any additional setup after loading the view, typically from a nib.
     }
