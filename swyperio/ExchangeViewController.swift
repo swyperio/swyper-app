@@ -85,7 +85,7 @@ class ExchangeViewController: UIViewController, MKMapViewDelegate {
         
         event.maxReservations -= 1
         
-        if event.maxReservations == 0 {
+        if event.maxReservations < 1 {
             
             exchangeView.deselectAnnotation(event, animated: true)
             exchangeView.removeAnnotation(event)
