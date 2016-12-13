@@ -174,7 +174,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                     }
                     else{
                         print("Hi this is pp1")
-                        print(error?.localizedDescription)
+                        print(error?.localizedDescription ?? "SOMETHING HAPPENED AT LINE 177 OF PROFILE VIEW CONTROLLER")
                     }
                 }
             }
