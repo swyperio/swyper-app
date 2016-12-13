@@ -59,9 +59,6 @@
                                     <segue destination="Zme-Eu-6xd" kind="unwind" identifier="signOutSegue" unwindAction="signOutWithSegue:" id="ML0-3R-OLK"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="h8l-NI-lpG">
-                                <rect key="frame" x="177" y="143" width="20" height="20"/>
-                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoZ-3Z-tcC">
                                 <rect key="frame" x="103" y="390" width="169" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -84,11 +81,9 @@
                             <constraint firstItem="0Zv-RR-Wjh" firstAttribute="leading" secondItem="AaA-xP-RRe" secondAttribute="leading" id="G5q-Ul-bVe"/>
                             <constraint firstItem="G7p-TF-2dG" firstAttribute="top" secondItem="NoZ-3Z-tcC" secondAttribute="bottom" constant="51" id="JLI-zB-8pj"/>
                             <constraint firstItem="0Zv-RR-Wjh" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="K0U-pp-jD7"/>
-                            <constraint firstItem="h8l-NI-lpG" firstAttribute="centerY" secondItem="AaA-xP-RRe" secondAttribute="centerY" id="LL2-71-x89"/>
                             <constraint firstItem="Wfd-8j-ag7" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="23" id="Qe7-Zj-InA"/>
                             <constraint firstItem="0Zv-RR-Wjh" firstAttribute="leading" secondItem="NoZ-3Z-tcC" secondAttribute="leading" id="Svf-3D-u3B"/>
                             <constraint firstItem="0Zv-RR-Wjh" firstAttribute="trailing" secondItem="NoZ-3Z-tcC" secondAttribute="trailing" id="WLi-0j-7Gb"/>
-                            <constraint firstItem="NoZ-3Z-tcC" firstAttribute="centerX" secondItem="h8l-NI-lpG" secondAttribute="centerX" id="Yol-fl-wTH"/>
                             <constraint firstItem="0Zv-RR-Wjh" firstAttribute="top" secondItem="AaA-xP-RRe" secondAttribute="bottom" constant="88" id="a5J-EY-YAK"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="G7p-TF-2dG" secondAttribute="bottom" constant="97" id="bGX-8c-9oG"/>
                             <constraint firstItem="G7p-TF-2dG" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="87" id="bqe-ms-NvI"/>
@@ -102,7 +97,6 @@
                     <tabBarItem key="tabBarItem" title="Profile" image="userIcon" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="emailLabel" destination="Wfd-8j-ag7" id="yk7-f1-0Jc"/>
-                        <outlet property="profilePicImageLoader" destination="h8l-NI-lpG" id="HpH-WN-tIC"/>
                         <outlet property="profilePicture" destination="AaA-xP-RRe" id="Kcf-WA-Mtb"/>
                     </connections>
                 </viewController>
@@ -114,7 +108,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="770" y="-322"/>
         </scene>
         <!--Exchange-->
         <scene sceneID="wg7-f3-ORb">

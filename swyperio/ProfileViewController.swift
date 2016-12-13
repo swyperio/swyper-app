@@ -15,7 +15,6 @@ import FirebaseStorage
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var profilePicture: UIImageView!
-    @IBOutlet weak var profilePicImageLoader: UIActivityIndicatorView!
     @IBOutlet weak var emailLabel: UILabel!
     
     var imagePicker = UIImagePickerController()
@@ -160,8 +159,6 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             let storageRef = storage.reference(forURL: "gs://swyperio-b9df2.appspot.com")
             
-            self.profilePicImageLoader.startAnimating()
-            
             setProfilePicture(imageView: self.profilePicture, imageToSet: image)
             
             if let imageData: NSData = UIImagePNGRepresentation(self.profilePicture.image!)! as NSData?{
@@ -179,15 +176,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                         print("Hi this is pp1")
                         print(error?.localizedDescription)
                     }
-                    self.profilePicImageLoader.removeFromSuperview()
                 }
             }
-        }
-        
-        if (self.profilePicImageLoader.isAnimating) {
-            
-            self.profilePicImageLoader.stopAnimating()
-            self.profilePicImageLoader.removeFromSuperview()
         }
         
         self.dismiss(animated: true, completion: nil)
